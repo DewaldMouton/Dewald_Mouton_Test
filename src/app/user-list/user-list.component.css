@@ -1,0 +1,141 @@
+#display-type {
+  display: flex;
+  font-size: 32px;
+}
+
+h1,
+h2 {
+  padding: 5px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 14px;
+}
+
+.fa {
+  margin: 0px 10px;
+}
+
+#display-type i:hover {
+  color: rgb(179, 179, 179);
+  cursor: pointer;
+}
+
+#center-container {
+  margin: auto;
+  display: flex;
+}
+
+.panel {
+  text-align: center;
+  display: flex;
+}
+
+#display-panels {
+  max-height: 90vh;
+  overflow: auto;
+}
+
+#display-list {
+  max-height: 90vh;
+  overflow: auto;
+  padding: 20px;
+}
+
+.display:hover {
+  cursor: pointer;
+  border-color: rgb(179, 179, 179);
+}
+
+.hide {
+  display: none;
+}
+
+.female,
+.male {
+  text-align: right;
+}
+
+.male {
+  display: block;
+}
+
+.male i {
+  background-color: #56CCF2;
+}
+
+.female {
+  display: block;
+}
+
+.female i {
+  background-color: #F261AF;
+}
+
+.male i,
+.female i {
+  width: 30px;
+  text-align: center;
+  height: 30px;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 100%;
+}
+
+.display {
+  border: 1px solid #56CCF2;
+  border-radius: 10px;
+  margin: auto;
+  min-width: 215px;
+  min-height: 215px;
+  padding: 20px;
+}
+
+.avatar {
+  margin: auto;
+  max-width: 100px;
+  max-height: 100px;
+  border: 0.5px solid #56CCF2;
+  border-radius: 100%;
+}
+
+.user-name {
+  margin: auto;
+}
+
+table {
+  width: 100%
+}
+
+thead {
+  background: #56CCF2;
+}
+
+td,
+th {
+  padding: 7px;
+  font-size: 24px;
+}
+
+tr {
+  border-bottom: 1px solid #56CCF2;
+}
+
+.view-profile a {
+  text-decoration: none;
+  color: #000;
+}
+
+.view-profile a:hover {
+  color: rgb(97, 97, 97);
+  cursor: pointer;
+}
+
+.fa-mars,
+.fa-venus {
+  color: #FFF;
+}

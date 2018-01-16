@@ -1,0 +1,30 @@
+<!--Start profile-->
+<div class="container-fluid">
+  <div class="row">
+
+    <div id="back">
+      <a (click)=back()>
+        <i class="fa fa-chevron-left"></i>
+      </a>
+    </div>
+
+    <div id="panel" class="col-md-12">
+      <div id="user">
+        <img [style.border-color]="user.gender === 'Female' ? '#F261AF' : '#56CCF2'" class="avatar" src="{{ user.Avatar }}" />
+        <h1 id="username">{{user.Username}}</h1>
+      </div>
+      <div [style.background]="user.gender === 'Female' ? '#F261AF' : '#56CCF2'" id="split">
+      </div>
+
+      <!--Employee info-->
+      <div id="info">
+        <h1 class="details" id="firstname">Firstname: {{user.first_name}}</h1>
+        <h1 class="details" id="lastname">Lastname: {{user.last_name}}</h1>
+        <h1 class="details" id="gender">Gender: {{user.gender}}</h1>
+        <h1 class="details" id="department">Department: {{user.Department}}</h1>
+        <h1 class="details" id="email">Email: {{user.email}}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End profile-->

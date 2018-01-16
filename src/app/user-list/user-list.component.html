@@ -1,0 +1,81 @@
+<!--User list start-->
+<div class="container-fluid">
+  <div class="row">
+    <div id="display-type" class="col-12">
+      <div id="center-container">
+
+        <!--Display panels button-->
+        <a id="display-panels" [style.color]="panel ? '#56CCF2' :'#A3A0A0'">
+          <i class="fa fa-th-large" (click)="panel = true; list = false"></i>
+        </a>
+
+        <!--Display rows button-->
+        <a id="display-rows" [style.color]="list ? '#56CCF2' :'#A3A0A0'">
+          <i class="fa fa-th-list " (click)="panel = false; list = true"></i>
+        </a>
+
+        <div class="dropdown">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Dropdown button
+          </button>
+          <div class="dropdown-menu">
+            <a *ngFor="let department of departments" class="dropdown-item">
+              <label>{{department}}</label>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Start display panels-->
+    <div id="display-panels" [style.display]="panel ? 'block' : 'none'">
+      <div class="panel col-md-3 col-sm-6 col-xs-12" *ngFor="let user of users">
+        <div class="display" [style.border-color]="user.gender === 'Female' ? '#F261AF' : '#56CCF2'" (click)="viewProfile(user)">
+          <span class="gender" [class]="user.gender === 'Female' ? 'female' : 'hide'">
+            <i class="fa fa-venus"></i>
+          </span>
+          <span class="gender" [class]="user.gender === 'Male' ? 'male' : 'hide'">
+            <i class="fa fa-mars"></i>
+          </span>
+          <img [style.border-color]="user.gender === 'Female' ? '#F261AF' : '#56CCF2'" class="avatar" src="{{ user.Avatar }}" />
+          <h1 class="user-name">{{ user.Username }}</h1>
+          <h2 class="user-name">{{ user.Department }}</h2>
+        </div>
+      </div>
+    </div>
+    <!--End display panels-->
+
+    <!--Start display rows-->
+    <div id="display-list" [style.display]="list ? 'block' : 'none'">
+      <table>
+
+        <!--Table headers-->
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <!--Table content-->
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td class="user-id">{{ user.id }}</td>
+            <td class="user-name">{{ user.Username }}</td>
+            <td class="user-email">{{ user.email }}</td>
+            <td class="view-profile">
+              <a (click)="viewProfile(user)">View Profile</a>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+    <!--End display rows-->
+
+  </div>
+</div>
+<!--User list end-->
